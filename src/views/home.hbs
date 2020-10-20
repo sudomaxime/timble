@@ -1,0 +1,18 @@
+hello
+
+{{> example}}
+
+{{#from path="index.json"}}
+  <h1>{{title}}</h1>
+  <h2>{{subTitle}}</h2>
+{{/from}}
+
+{{#from path="list.yaml"}}
+  <ul>
+    {{#each awesomePoints as |point|}}
+      <li>{{point}}</li>
+    {{/each}}
+  </ul>
+{{/from}}
+
+{{{from path="rich-content.md"}}}
