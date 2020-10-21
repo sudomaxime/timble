@@ -1,4 +1,4 @@
-import { router } from "./timble/index.js";
+import { router } from "./.timble/index.js";
 
 router.get('/', function (req, res) {
   res.render('home');

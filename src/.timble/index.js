@@ -9,7 +9,8 @@ export default function (config) {
   app.engine('.hbs', hbs(config.helpers));
   app.set('views', path.resolve("./src/views"));
   app.set('view engine', '.hbs');
-  app.use('/static', express.static(path.resolve("./src/static")));
+  app.use('/assets/content/*', (req, res) => res.status(404).send())
+  app.use('/assets', express.static(path.resolve("./src/assets")));
   app.use(config.router);
   
   app.listen(config.port, () => {

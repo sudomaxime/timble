@@ -5,7 +5,7 @@ import YAML from "yaml";
 import markdown from "marked";
 
 const cwd = process.cwd();
-const contentPath = path.resolve(cwd, "./src/content");
+const contentPath = path.resolve(cwd, "./src/assets/content");
 const allowedExtensions = ["json", "yaml", "md"];
 const dirPaths = readContentDir();
 
