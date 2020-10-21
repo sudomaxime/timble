@@ -23,7 +23,6 @@ export function readContentDir () {
  * the data into a javascript object to be used in templates.
  * 
  * @param {string} filePath The path starting from the content folder
- * @param {string} extension The extension of the file without the "."
  */
 export function getContent (filePath) {
   const resolvedPath = dirPaths.find(p => p.includes(filePath));
