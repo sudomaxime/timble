@@ -1,9 +1,9 @@
 import { getContent } from "./fileReader.js";
 
 export default {
-  from: function (context) {
-    let filePath = context.hash 
-      ? context.hash.path
+  from: function (context, options) {
+    let filePath = context 
+      ? context
       : "";
      
     if (!filePath){
@@ -11,10 +11,15 @@ export default {
     }
   
     let content = getContent(filePath);
-    if (context.fn) {
-      return context.fn(content);
+
+    if (options.fn) {
+      return options.fn(content);
     } else {
       return content;
     }
+  },
+
+  script: function (context) {
+    return `<script src="/assets/scripts/${context}"></script>`
   }
 }

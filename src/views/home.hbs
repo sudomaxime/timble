@@ -2,12 +2,12 @@
 
 {{helloTimble}}
 
-{{#from path="index.json"}}
+{{#from "index.json"}}
   <h1>{{title}}</h1>
   <h2>{{subTitle}}</h2>
 {{/from}}
 
-{{#from path="list.yaml"}}
+{{#from "list.yaml"}}
   <ul>
     {{#each awesomePoints as |point|}}
       <li>{{point}}</li>
@@ -15,4 +15,6 @@
   </ul>
 {{/from}}
 
-{{{from path="rich-content.md"}}}
+{{{from "rich-content.md"}}}
+
+{{{script "example-script.js"}}}
