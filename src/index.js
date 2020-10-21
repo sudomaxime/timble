@@ -1,4 +1,4 @@
-import timble from "./.timble/index.js";
+import timble from "./timble/index.js";
 import router from "./routes.js";
 import helpers from "./helpers.js";
 

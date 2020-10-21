@@ -7,3 +7,10 @@ do `npm i`
 then `npm run dev`
 
 enjoy.
+
+### TODO:
+
+* Add a sitemap generator
+* Add a image cropping/webp converter and helper
+* Add style and script import helpers
+* ~~Add req.query and req.params in all templates~~
